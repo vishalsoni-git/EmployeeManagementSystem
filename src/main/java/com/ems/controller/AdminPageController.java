@@ -165,7 +165,7 @@ public class AdminPageController {
 
        employeeLeaveService.leaveProcess(action, empId);
         
-        return "redirect:/admin/AdminLeaveManagement";
+        return "redirect:/AdminLeaveManagement";
     }
     
 
@@ -187,7 +187,7 @@ public class AdminPageController {
         
       employeeAttendenceService.markOrUnmarkAttendence(action, id);
         
-        return "AdminAttendence";
+        return "redirect:/AdminAttendence";
     }
 
     @GetMapping("/uploadUpdates")
