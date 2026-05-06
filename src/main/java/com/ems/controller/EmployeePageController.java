@@ -109,8 +109,8 @@ public class EmployeePageController {
 
     // Employee Attendence Code Working
     @GetMapping("/EmployeeAttendence")
-    public String employeeAttendence() {
-        return "EmployeeAttendence";
+    public String employeeAttendance() {
+        return "redirect:/EmployeeAttendence";
     }
 
     @PostMapping("/mark")

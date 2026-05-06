@@ -43,7 +43,7 @@ public class EmployeeAttendenceService {
     
 
      public void markOrUnmarkAttendence(String action,String id){
-        //  EmployeeAttendence employeeAttendence= employeeAttendenceService.getByEmployeeIdAndDate(Integer.parseInt(empId), LocalDate.now());
+        //  EmployeeAttendence employeeAttendance= employeeAttendenceService.getByEmployeeIdAndDate(Integer.parseInt(empId), LocalDate.now());
 
         Optional<EmployeeAttendence> employeeAttendenceOptional=getByID(Long.parseLong(id));
 
