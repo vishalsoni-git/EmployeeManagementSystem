@@ -109,8 +109,8 @@ public class EmployeePageController {
 
     // Employee Attendence Code Working
     @GetMapping("/EmployeeAttendence")
-    public String employeeAttendance() {
-        return "redirect:/EmployeeAttendence";
+    public String employeeAttendence() {
+        return "EmployeeAttendence";
     }
 
     @PostMapping("/mark")
@@ -138,7 +138,7 @@ public class EmployeePageController {
                    redirectAttributes.addFlashAttribute("attendance", ea);
                    redirectAttributes.addFlashAttribute("message", "Attendance Marked Successfully!");
 
-                   return "redirect:/employee/EmployeeAttendence"; // Refers to a Thymeleaf page for confirmation
+                   return "employee/EmployeeAttendence"; // Refers to a Thymeleaf page for confirmation
                    }
                 }
                 else
