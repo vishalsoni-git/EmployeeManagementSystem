@@ -165,7 +165,7 @@ public class AdminPageController {
 
        employeeLeaveService.leaveProcess(action, empId);
         
-        return "/AdminLeaveManagement";
+        return "redirect:/admin/AdminLeaveManagement";
     }
     
 
