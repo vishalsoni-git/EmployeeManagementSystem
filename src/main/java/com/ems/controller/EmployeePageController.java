@@ -104,7 +104,7 @@ public class EmployeePageController {
         employeeLeaveService.save(employeeLeave);
         System.out.println("......................Employee Leave Data saved....................");
 
-        return "redirect:/employee/EmployeeLeave"; // Redirect to GET endpoint
+        return "employee/EmployeeLeave"; // Redirect to GET endpoint
     }
 
     // Employee Attendence Code Working
@@ -123,7 +123,7 @@ public class EmployeePageController {
                     if(employeeAttendenceService.hasMarkedAttendanceToday(employee.getId(), LocalDate.now())){
  
                         redirectAttributes.addFlashAttribute("message", "Attendance Already Marked!");
-                        return "redirect:/employee/EmployeeAttendence";               
+                        return "employee/EmployeeAttendence";
                     }
                    else{
                     EmployeeAttendence ea=new EmployeeAttendence();
