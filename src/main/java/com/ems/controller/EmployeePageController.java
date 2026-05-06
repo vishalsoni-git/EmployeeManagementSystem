@@ -123,7 +123,7 @@ public class EmployeePageController {
                     if(employeeAttendenceService.hasMarkedAttendanceToday(employee.getId(), LocalDate.now())){
  
                         redirectAttributes.addFlashAttribute("message", "Attendance Already Marked!");
-                        return "redirect:/employee/EmployeeAttendence";
+                        return "employee/EmployeeAttendence";
                     }
                    else{
                     EmployeeAttendence ea=new EmployeeAttendence();
@@ -138,11 +138,12 @@ public class EmployeePageController {
                    redirectAttributes.addFlashAttribute("attendance", ea);
                    redirectAttributes.addFlashAttribute("message", "Attendance Marked Successfully!");
 
-                   return "redirect:/employee/EmployeeAttendence"; // Refers to a Thymeleaf page for confirmation
+                   return "employee/EmployeeAttendence"; // Refers to a Thymeleaf page for confirmation
                    }
                 }
-                else
+                else{
                 return "redirect:/error";
+                }
     }
 
 //Employee Updates Page Working Code
