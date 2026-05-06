@@ -104,7 +104,7 @@ public class EmployeePageController {
         employeeLeaveService.save(employeeLeave);
         System.out.println("......................Employee Leave Data saved....................");
 
-        return "employee/EmployeeLeave"; // Redirect to GET endpoint
+        return "redirect:/employee/EmployeeLeave"; // Redirect to GET endpoint
     }
 
     // Employee Attendence Code Working
@@ -123,7 +123,7 @@ public class EmployeePageController {
                     if(employeeAttendenceService.hasMarkedAttendanceToday(employee.getId(), LocalDate.now())){
  
                         redirectAttributes.addFlashAttribute("message", "Attendance Already Marked!");
-                        return "employee/EmployeeAttendence";
+                        return "redirect:/employee/EmployeeAttendence";
                     }
                    else{
                     EmployeeAttendence ea=new EmployeeAttendence();
@@ -138,7 +138,7 @@ public class EmployeePageController {
                    redirectAttributes.addFlashAttribute("attendance", ea);
                    redirectAttributes.addFlashAttribute("message", "Attendance Marked Successfully!");
 
-                   return "employee/EmployeeAttendence"; // Refers to a Thymeleaf page for confirmation
+                   return "redirect:/employee/EmployeeAttendence"; // Refers to a Thymeleaf page for confirmation
                    }
                 }
                 else

@@ -187,7 +187,7 @@ public class AdminPageController {
         
       employeeAttendenceService.markOrUnmarkAttendence(action, id);
         
-        return "redirect:/AdminAttendence";
+        return "redirect:/admin/AdminAttendence";
     }
 
     @GetMapping("/uploadUpdates")
@@ -216,7 +216,7 @@ public class AdminPageController {
         p.setDate(LocalDate.now());
         postsService.savePost(p);
         
-        return "admin/uploadUpdates";
+        return "redirect:/admin/uploadUpdates";
     }
 
 
