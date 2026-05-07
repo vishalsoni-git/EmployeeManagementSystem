@@ -97,7 +97,7 @@ public class AdminPageController {
 
          System.out.println("Employee Save Successfully ");
 
-      return "/"+pageName;
+      return "redirect:/admin/showMessage";
     }    
 
     @PostMapping("/find")
@@ -126,7 +126,7 @@ public class AdminPageController {
         } else {
             model.addAttribute("error", "Employee not found.");
         }
-        return "redirect:/admin/employeeShow"; // same page name as the form
+        return "/"+pageName; // same page name as the form
     }
 
     @PostMapping("/delete")
