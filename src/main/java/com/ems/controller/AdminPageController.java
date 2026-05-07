@@ -97,7 +97,7 @@ public class AdminPageController {
 
          System.out.println("Employee Save Successfully ");
 
-      return "redirect:/admin/showMessage";
+      return "/"+pageName;
     }    
 
     @PostMapping("/find")
