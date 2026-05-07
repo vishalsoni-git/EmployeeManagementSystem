@@ -126,7 +126,7 @@ public class AdminPageController {
         } else {
             model.addAttribute("error", "Employee not found.");
         }
-        return "/"+pageName; // same page name as the form
+        return "redirect:/admin/employeeShow"; // same page name as the form
     }
 
     @PostMapping("/delete")
